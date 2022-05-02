@@ -26,7 +26,7 @@ export default function AdminCard({ vaca, setUpdate1 }) {
     const [msg, setmsg] = useState("");
 
     const delvacations = async () => {
-        const res = await fetch(`http://localhost:5000/admin/${vaca.id}`, {
+        const res = await fetch(`http://localhost:5000/users/1/${vaca.id}`, {
             method: "DELETE",
             headers: { 'content-type': 'application/json; charset=UTF-8' },
             credentials: "include"
@@ -36,7 +36,7 @@ export default function AdminCard({ vaca, setUpdate1 }) {
 
 
     const editvacation = async () => {
-        const res1 = await fetch('http://localhost:1000/admin', {
+        const res1 = await fetch('http://localhost:1000/users/1', {
             method: "put",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ id: vaca.id, descriptions, country, cityName, price, img, dateFrom, dateUntil }),

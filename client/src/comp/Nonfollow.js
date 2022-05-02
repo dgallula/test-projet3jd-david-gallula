@@ -50,13 +50,13 @@ export default function Nonfollow({ nonfollow ,setUpdate}) {
                 <CardMedia
                     component="img"
                     height="140"
-                    image={nonfollow.img}
-                    alt={nonfollow.cityName}
+                    image={nonfollow.image}
+                    alt={nonfollow.destnation}
                 />
 
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                        {nonfollow.cityName}, {nonfollow.country}
+                        {nonfollow.destnation}
                     </Typography>
                     <Typography gutterBottom variant="h6" component="div">
                         {new Date(nonfollow.startDate).toLocaleDateString('he-IL')} - {new Date(nonfollow.endDate).toLocaleDateString('he-IL')}
